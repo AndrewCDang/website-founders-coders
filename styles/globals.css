@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: rgb(var(--col-white));
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box !important;
+}
+
+:root {
+    --col-red: 255, 86, 120;
+    --col-blue: 5, 203, 214;
+    --col-yellow: 255, 208, 86;
+    --col-white: 255, 255, 255;
+    --col-grey: 169, 169, 169;
+    --col-grey-hover: 230, 230, 230;
+    --col-light-grey: 210, 210, 210;
+    --col-green: 131, 230, 74;
+    --col-black: 30, 30, 30;
+    --col-blue-select: 50, 152, 253;
+    --col-purple: 207, 159, 255;
+
+    --primary-glow: conic-gradient(
+        from 180deg at 50% 50%,
+        rgb(var(--col-red)) 0deg,
+        rgb(var(--col-blue)) 55deg,
+        rgb(var(--col-yellow)) 120deg,
+        rgb(var(--col-blue)) 160deg,
+        transparent 360deg
+    );
+
+    --primary-glow-2: conic-gradient(
+        from 180deg at 50% 50%,
+        rgb(var(--col-blue)) 0deg,
+        rgb(var(--col-red)) 55deg,
+        rgb(var(--col-yellow)) 120deg,
+        rgb(var(--col-red)) 160deg,
+        transparent 360deg
+    );
+
+    --primary-glow-3: conic-gradient(
+        from 180deg at 50% 50%,
+        rgb(var(--col-red)) 0deg,
+        rgb(var(--col-yellow)) 55deg,
+        rgb(var(--col-blue)) 120deg,
+        rgb(var(--col-yellow)) 160deg,
+        transparent 360deg
+    );
+
+    --box-shadow-default: 0px 8px 16px rgba(var(--col-black), 0.3);
+    --box-shadow-sm: 0px 2px 4px rgba(var(--col-black), 0.2);
+    --box-shadow-sm-2: 2px 2px 4px rgba(var(--col-black), 0.2);
+}
+
+/* General Heading Class */
+.section-heading {
+    font-size: clamp(3rem, 1rem + 2.5vw, 4rem);
+    line-height: clamp(3rem, 1.2rem + 2.5vw, 4rem);
+}
+
+.heading {
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 3rem);
+    line-height: clamp(1.8rem, 1.2rem + 2.5vw, 3.6rem);
+}
+
+/* Subheading Classes */
+.subheading-l {
+    font-size: clamp(1.3rem, 1rem + 2vw, 2.5rem);
+    line-height: clamp(1.56rem, 1.2rem + 2vw, 3rem);
+}
+
+.subheading-m {
+    font-size: clamp(1.2rem, 0.9rem + 1.75vw, 2rem);
+    line-height: clamp(1.44rem, 1.08rem + 1.75vw, 2.4rem);
+}
+
+p {
+    font-size: clamp(0.8rem, 0.7rem + 1vw, 1rem);
+    line-height: clamp(1.12rem, 0.96rem + 1vw, 1.4rem);
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/* Text Colours */
+.text-red {
+    color: rgb(var(--col-red));
+}
+
+.text-blue {
+    color: rgb(var(--col-blue));
+}
+
+.text-yellow {
+    color: rgb(var(--col-yellow));
+}
+
+.text-white {
+    color: rgb(var(--col-white));
+}
+
+.text-grey {
+    color: rgb(var(--col-grey));
+}
+
+.text-green {
+    color: rgb(var(--col-green));
+}
+
+.text-black {
+    color: rgb(var(--col-black));
+}
+
+.text-purple {
+    color: rgb(var(--col-purple));
+}
+
+/* bg Colours */
+.bg-yellow {
+    background-color: rgb(var(--col-yellow));
+}
+
+.bg-blue {
+    background-color: rgb(var(--col-blue));
+}
+
+.bg-red {
+    background-color: rgb(var(--col-red));
+}
+
+/* Animations */
+.animation-rotate {
+    animation-name: animation-rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-rotate {
+    0% {
+        transform: rotate(0turn);
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(1turn);
+        opacity: 1;
+    }
+}
+
+.animation-rotate-2 {
+    animation-name: animation-rotate-2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-rotate-2 {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.animation-pulse {
+    animation-name: animation-pulse;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-pulse {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.2;
+    }
+}
+
+.animation-enter {
+    animation-name: animation-enter;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes animation-enter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Overrides */
+ul,
+ol {
+    padding-left: 1rem;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+html {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: rgba(var(--col-black), 1);
+}
+
+body {
+    margin: 0;
+    position: relative;
+    overflow-x: clip;
+    padding: 1.5rem;
+    display: flex;
+    min-height: 100svh;
+    flex-direction: column;
+}
+
+body > main {
+    min-height: calc(100vh - 3.5rem);
+    padding-top: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button {
+    all: unset;
+    font-family: inherit;
+    background-color: rgba(var(--col-white), 0.8);
+    color: black !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    gap: 0.5rem;
+}
+button:hover {
+    background-color: rgb(var(--col-white));
+}
+
+footer {
+    margin-top: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
